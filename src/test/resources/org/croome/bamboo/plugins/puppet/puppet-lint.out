@@ -1,0 +1,386 @@
+./manifests/config.pp - WARNING: double quoted string containing no variables on line 45
+
+  require => [Class['stash::install'],Class['stash::user'],Exec["mkdirp-homedir-stash"]],
+                                                                ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 23
+
+  owner   => "${stash::params::user}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 24
+
+  group   => "${stash::params::group}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 30
+
+  creates => "${stash::params::homedir}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 33
+
+  file { "${stash::params::homedir}":
+           ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 35
+
+  owner   => "${stash::params::user}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 36
+
+  group   => "${stash::params::group}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 43
+
+  owner   => "${stash::params::user}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 44
+
+  group   => "${stash::params::group}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 48
+
+  if "${stash::params::db}" == 'postgresql' {
+       ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 52
+
+  owner   => "${stash::params::user}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 53
+
+  group   => "${stash::params::group}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 58
+
+  if "${stash::params::db}" == 'mysql' {
+       ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 62
+
+  owner   => "${stash::params::user}",
+               ^
+
+./manifests/config.pp - WARNING: string containing only a variable on line 63
+
+  group   => "${stash::params::group}",
+               ^
+
+./manifests/config.pp - WARNING: line has more than 80 characters on line 45
+
+  require => [Class['stash::install'],Class['stash::user'],Exec["mkdirp-homedir-stash"]],
+                                                                             ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 25
+
+  cwd     => "${stash::params::pkgdir}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 32
+
+  cwd     => "${stash::params::pkgdir}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 41
+
+  creates => "${stash::params::installdir}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 44
+
+  file { "${stash::params::installdir}":
+           ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 46
+
+  owner   => "${stash::params::user}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 47
+
+  group   => "${stash::params::group}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 52
+
+  cwd     => "${stash::params::installdir}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 54
+
+  creates => "${stash::params::webappdir}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 55
+
+  user    => "${stash::params::user}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 56
+
+  group   => "${stash::params::group}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 57
+
+  require => [Exec['wget-stash-package'], Class['stash::user'], File["${stash::params::installdir}"]],
+                                                                       ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 60
+
+  if "${stash::params::db}" == 'mysql' {
+       ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 65
+
+  user    => "${stash::params::user}",
+               ^
+
+./manifests/install.pp - WARNING: string containing only a variable on line 66
+
+  group   => "${stash::params::group}",
+               ^
+
+./manifests/install.pp - WARNING: line has more than 80 characters on line 20
+
+  $packagefile = "${stash::params::pkgdir}/atlassian-${stash::params::product}-${stash::params::version}.${stash::params::format}"
+                                                                               ^
+
+./manifests/install.pp - WARNING: line has more than 80 characters on line 23
+
+  'Darwin' : { # assuming you did download wget - ill maybe fix this and check for it
+                                                                             ^
+
+./manifests/install.pp - WARNING: line has more than 80 characters on line 26
+
+  command => "${stash::params::cmdwget} --no-check-certificate ${stash::params::downloadURL}",
+                                                                         ^
+
+./manifests/install.pp - WARNING: line has more than 80 characters on line 33
+
+  command => "${stash::params::cmdwget} --no-check-certificate ${stash::params::downloadURL}",
+                                                                         ^
+
+./manifests/install.pp - WARNING: line has more than 80 characters on line 53
+
+  command => "/usr/bin/unzip -o -d ${stash::params::installdir} ${packagefile}",
+                                                                             ^
+
+./manifests/install.pp - WARNING: line has more than 80 characters on line 57
+
+  require => [Exec['wget-stash-package'], Class['stash::user'], File["${stash::params::installdir}"]],
+                                                                             ^
+
+./manifests/install.pp - WARNING: line has more than 80 characters on line 63
+
+  command => "${stash::params::cmdwget} --no-check-certificate ${stash::params::mysqldownloadURL}",
+                                                                           ^
+
+./manifests/install.pp - WARNING: line has more than 80 characters on line 64
+
+  creates => "${stash::params::webappdir}/lib/${stash::params::mysqlfilename}",
+                                                                           ^
+
+./manifests/params.pp - WARNING: double quoted string containing no variables on line 66
+
+  $mysqljdbcversion  = hiera("mysqljdbcversion")
+                             ^
+
+./manifests/params.pp - WARNING: line has more than 80 characters on line 80
+
+  $downloadURL = "http://www.atlassian.com/software/${product}/downloads/binary/atlassian-${product}-${version}.${format}"
+                                                                               ^
+
+./manifests/service.pp - WARNING: ensure found on line but it's not the first attribute on line 20
+
+  ensure    => 'running',
+  ^
+
+./manifests/ssl.pp - WARNING: class not documented on line 1
+./manifests/user.pp - WARNING: class not documented on line 1
+./manifests/user.pp - WARNING: double quoted string containing no variables on line 29
+
+  comment     => "Stash Servcie User",
+                 ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 5
+
+  creates => "${stash::params::user_home}",
+               ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 8
+
+  file {"$stash::params::user_home":
+         ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 10
+
+  group   => "$stash::params::group",
+              ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 11
+
+  owner   => "$stash::params::user",
+              ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 13
+
+  require => [ Exec["mkdirp-$stash::params::user_home"], User["$stash::params::user"]],
+                                                               ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 16
+
+  group { "$stash::params::group":
+           ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 17
+
+  name    => "$stash::params::group",
+              ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 19
+
+  gid     => "$stash::params::gid",
+              ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 22
+
+  user { "$stash::params::user":
+          ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 23
+
+  name        => "$stash::params::user",
+                  ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 25
+
+  home        => "$stash::params::user_home",
+                  ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 27
+
+  password    => "$stash::params::user_password",
+                  ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 28
+
+  gid         => "$stash::params::gid",
+                  ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 30
+
+  uid         => "$stash::params::uid",
+                  ^
+
+./manifests/user.pp - WARNING: string containing only a variable on line 31
+
+  require     => Group["$stash::params::group"],
+                        ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 3
+
+  exec {"mkdirp-$stash::params::user_home":
+                ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 8
+
+  file {"$stash::params::user_home":
+         ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 10
+
+  group   => "$stash::params::group",
+              ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 11
+
+  owner   => "$stash::params::user",
+              ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 13
+
+  require => [ Exec["mkdirp-$stash::params::user_home"], User["$stash::params::user"]],
+                            ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 13
+
+  require => [ Exec["mkdirp-$stash::params::user_home"], User["$stash::params::user"]],
+                                                               ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 16
+
+  group { "$stash::params::group":
+           ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 17
+
+  name    => "$stash::params::group",
+              ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 19
+
+  gid     => "$stash::params::gid",
+              ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 22
+
+  user { "$stash::params::user":
+          ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 23
+
+  name        => "$stash::params::user",
+                  ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 25
+
+  home        => "$stash::params::user_home",
+                  ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 27
+
+  password    => "$stash::params::user_password",
+                  ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 28
+
+  gid         => "$stash::params::gid",
+                  ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 30
+
+  uid         => "$stash::params::uid",
+                  ^
+
+./manifests/user.pp - WARNING: variable not enclosed in {} on line 31
+
+  require     => Group["$stash::params::group"],
+                        ^
+
+./manifests/user.pp - WARNING: line has more than 80 characters on line 13
+
+  require => [ Exec["mkdirp-$stash::params::user_home"], User["$stash::params::user"]],
+                                                                             ^
+
+./manifests/user.pp - WARNING: ensure found on line but it's not the first attribute on line 18
+
+  ensure  => present,
+  ^
+
+./manifests/user.pp - WARNING: ensure found on line but it's not the first attribute on line 24
+
+  ensure      => present,
+  ^
+
+./manifests/user.pp - WARNING: unquoted file mode on line 12
+
+  mode    => 0755,
+             ^

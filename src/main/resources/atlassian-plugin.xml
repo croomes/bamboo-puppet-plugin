@@ -1,0 +1,37 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/puppetIcon.png</param>
+        <param name="plugin-logo">images/puppetLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="puppet" location="english"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="puppet-resources" name="puppet Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>       
+        <resource type="download" name="puppet.css" location="/css/puppet.css"/>
+        <resource type="download" name="puppet.js" location="/js/puppet.js"/>
+        <resource type="download" name="images/" location="/images"/>
+        <context>Puppet</context>
+    </web-resource>
+       
+    <!-- import from the product container -->
+    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+
+	<taskType key="LintComponent" name="Puppet Lint" class="org.croome.bamboo.plugins.puppet.tasks.lint.LintTask">
+	        <description>Performs puppet-lint code hygiene tests as part of your build</description>
+	        <category name="builder"/>
+	        <category name="test"/>
+	        <executable key="puppet-lint" nameKey="builder.lint.executableName" pathHelpKey="builder.lint.helpPath"/>
+	        <capabilityDefaultsHelper class="org.croome.bamboo.plugins.puppet.LintCapabilityDefaultsHelper"/>
+			<configuration class="org.croome.bamboo.plugins.puppet.tasks.lint.LintTaskConfigurator" />
+	        <resource type="freemarker" name="edit" location="tasks/lint/lintTaskEdit.ftl"/>
+	        <resource type="freemarker" name="view" location="tasks/lint/lintTaskView.ftl"/>
+	        <resource type="download" name="icon" location="images/puppetIcon.png"/>
+	</taskType> 
+
+</atlassian-plugin>
