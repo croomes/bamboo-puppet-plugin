@@ -7,6 +7,10 @@ puppet-lint, puppet parser validate and MCollective.
 
 The goal is to fully-automate continuous deployment of Puppet code via Jira.
 
+## Installation
+
+Download and install from the [Atlassian Marketplace](https://marketplace.atlassian.com/plugins/org.croome.bamboo.plugins.bamboo-puppet-plugin)
+
 ## Current Features
 Via a Bamboo task, this plugin enables you to run:
 * Puppet Lint - Enforce [Puppet style guidelines](http://docs.puppetlabs.com/guides/style_guide.html) 
