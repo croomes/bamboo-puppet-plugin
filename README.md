@@ -9,7 +9,20 @@ The goal is to fully-automate continuous deployment of Puppet code via Jira.
 
 ## Installation
 
-Download and install from the [Atlassian Marketplace](https://marketplace.atlassian.com/plugins/org.croome.bamboo.plugins.bamboo-puppet-plugin)
+1. Download and install from the [Atlassian Marketplace](https://marketplace.atlassian.com/plugins/org.croome.bamboo.plugins.bamboo-puppet-plugin)
+
+2. Install the puppet-lint gem on bamboo (gem install puppet-lint).
+
+3. Setup the bamboo capability for puppet-lint:
+
+In Bamboo click the Gear icon in the upper right corner, and go to Overview -> Server Capabilities
+
+Click "Detect server capabilities", Puppet Lint should show up. If it does not, try to manually add it via the "Add capability" Drop down. It should be:
+
+    Capability type: Executable
+    Type: builder.lint.executableName
+    Executable label: Puppet Lint
+    Path: puppet-lint
 
 ## Current Features
 Via a Bamboo task, this plugin enables you to run:
