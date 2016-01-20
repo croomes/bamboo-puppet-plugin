@@ -38,6 +38,7 @@ public class LintTestParser implements TestParser
     private String currentSuiteName = "puppet-lint";
     private String currentTestName = "";
     private String nextTestName = "";
+    private String dummyTestResultName = "Puppet Lint executed";
     private String currentTestDuration = "0";
     private StringBuilder currentTestInput = new StringBuilder();
     private HashMap <String, StringBuilder> testOutput = new LinkedHashMap <String, StringBuilder>();
@@ -53,6 +54,12 @@ public class LintTestParser implements TestParser
     @Override
     public Set<TestResults> getSuccessfulTestResults()
     {
+        // add a dummy test result in case there are no test results and thus no passing tests
+        final TestResults dummyTestResult = new TestResults(currentSuiteName, dummyTestResultName, currentTestDuration);
+        dummyTestResult.setSystemOut(dummyTestResultName);
+        dummyTestResult.setState(TestState.SUCCESS);
+        successfulTestResults.add(dummyTestResult);
+
 		for (Map.Entry<String, StringBuilder> entry : testOutput.entrySet()) 
 		{
     		String testName = entry.getKey();
