@@ -5,8 +5,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>puppet</artifactId>
-    <version>1.0</version>
+    <artifactId>bamboo-puppet-plugin</artifactId>
+    <version>1.0.1</version>
 
     <organization>
         <name>Simon Croome</name>
@@ -20,9 +20,8 @@ Currently supports puppet-lint tests with more to come.</description>
     <packaging>atlassian-plugin</packaging>
 
     <properties>
-        <bamboo.version>5.3</bamboo.version>
-        <bamboo.data.version>3.2.2</bamboo.data.version>
-        <amps.version>4.2.10</amps.version>
+        <bamboo.version>5.9.0</bamboo.version>
+        <amps.version>6.1.2</amps.version>
         <plugin.testrunner.version>1.1.2</plugin.testrunner.version>
     </properties>
 
@@ -70,7 +69,7 @@ Currently supports puppet-lint tests with more to come.</description>
                 <extensions>true</extensions>
                 <configuration>
                     <productVersion>${bamboo.version}</productVersion>
-                    <productDataVersion>${bamboo.data.version}</productDataVersion>
+                    <productDataVersion>${bamboo.version}</productDataVersion>
                 </configuration>
             </plugin>
           
