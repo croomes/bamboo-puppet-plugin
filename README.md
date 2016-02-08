@@ -22,7 +22,7 @@ Click "Detect server capabilities", Puppet Lint should show up. If it does not, 
     Capability type: Executable
     Type: builder.lint.executableName
     Executable label: Puppet Lint
-    Path: puppet-lint
+    Path: /usr/bin/puppet-lint  # or wherever the fully-qualified path to the executable is
 
 ## Current Features
 Via a Bamboo task, this plugin enables you to run:
