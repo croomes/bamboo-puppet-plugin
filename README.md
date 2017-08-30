@@ -29,12 +29,6 @@ Via a Bamboo task, this plugin enables you to run:
 * Puppet Lint - Enforce [Puppet style guidelines](http://docs.puppetlabs.com/guides/style_guide.html) 
 with `puppet-lint`
 
-## Upcoming Features
-* Puppet syntax validation - Ensure manifests compile with `puppet parser validate`
-* Remote job execution - Run [mcollective](http://puppetlabs.com/mcollective) 
-commands on remote nodes such as `mco puppet runonce`
-* Remote integration testing - Run [serverspec](http://serverspec.org/) tests on remote nodes
-
 For Puppet RSpec testing, see the 
 [Bamboo Rake Plugin](https://marketplace.atlassian.com/plugins/au.id.wolfe.bamboo.rake-bamboo-plugin)
 
@@ -63,6 +57,7 @@ code improvements are also very welcome.
 Many thanks to the following people:
 
  * Tim Sharpe (@rodjek) - Author of [puppet-lint](http://puppet-lint.com/)
+ * Liam Monahan (@spicybits) - Fixes and maintenance
 
 ## Links
 
