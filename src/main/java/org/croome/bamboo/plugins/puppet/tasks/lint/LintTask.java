@@ -141,7 +141,7 @@ public class LintTask implements TaskType {
             buildLogger.addBuildLogEntry("Executing " + command);
         	buildLogger.getInterceptorStack().add(lintLogInterceptor);
 
-            final ExternalProcess externalProcess = processService.executeProcess(taskContext, new ExternalProcessBuilder()
+            final ExternalProcess externalProcess = processService.executeExternalProcess(taskContext, new ExternalProcessBuilder()
 	            .command(arguments)
 	            .env(environment)
 	            .workingDirectory(taskContext.getWorkingDirectory()));

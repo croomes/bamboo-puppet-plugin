@@ -6,7 +6,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>bamboo-puppet-plugin</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <organization>
         <name>Simon Croome</name>
@@ -20,8 +20,8 @@ Currently supports puppet-lint tests with more to come.</description>
     <packaging>atlassian-plugin</packaging>
 
     <properties>
-        <bamboo.version>5.9.0</bamboo.version>
-        <amps.version>6.1.2</amps.version>
+        <bamboo.version>6.4.0</bamboo.version>
+        <amps.version>6.3.3</amps.version>
         <plugin.testrunner.version>1.1.2</plugin.testrunner.version>
     </properties>
 
